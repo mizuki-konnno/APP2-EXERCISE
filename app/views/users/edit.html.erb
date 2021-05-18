@@ -1,0 +1,35 @@
+
+
+<p id="notice">
+      <%= notice %>
+</p>
+
+<% if @user.errors.any? %>
+  <%= @user.errors.count %>errors prohibited this book from being saved:
+  <% @user.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
+
+<div class="container">
+<div class="row">
+  <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+  <h2>User info</h2>
+
+  <%= form_with model:@user, local:true do |f| %>
+  <table>
+    <tbody>
+      <tr><td><label for="inputName">Name</label></td></tr>
+      <tr><td><%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"名前"%></td></tr>
+      <tr><td><label for="inputImage">Image</label></td></tr>
+      <tr><td><%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %></td></tr>
+      <tr><td><label for="inputIntroduction">Introduction</label></td></tr>
+      <tr><td><%= f.text_area :introduction, autofocus: true, id:"inputIntroduction" %></tr>
+      <tr><td><%= f.submit "Update User",class: 'btn btn-secondary' %></td></tr>
+    </tbody>
+  </table>
+
+<% end %>
+</div>
+</div>
+</div>
