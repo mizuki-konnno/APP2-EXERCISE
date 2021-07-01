@@ -41,16 +41,38 @@
   <p class="h5 my-0 me-md-auto fw-normal">
     <a href = "https://24d12a1d0c7b48e3814477a24286a1ef.vfs.cloud9.us-east-1.amazonaws.com/">Bookers</a></p>
   </ul>
-  <nav class="my-2 my-md-0 me-md-3 ">
-    <%= link_to  root_path,class: "text-light" do %>
-    <i class="fas fa-home"></i>Home<%end%>
-    <%= link_to home_about_path,class: "text-light" do %>
-    <i class="fas fa-link"></i>About<%end%>
-    <%= link_to new_user_registration_path,class: "text-light" do %>
-    <i class="fas fa-user-plus"></i>sign up<%end%>
-    <%= link_to new_user_session_path,class: "text-light" do %>
-    <i class="fas fa-sign-in-alt"></i> login<%end%>
-  </nav>
+
+    <div id="sp-menu">
+      <h2>MENU</h2>
+      <ul>
+        <li>
+          <%= link_to  root_path,class: "text-light" do %>
+          <i class="fas fa-home"></i>Home<%end%></a>
+        </li>
+        <li>
+          <%= link_to home_about_path,class: "text-light" do %>
+          <i class="fas fa-link"></i>About<%end%>
+        </li>
+        <li>
+          <%= link_to new_user_registration_path,class: "text-light" do %>
+          <i class="fas fa-user-plus"></i>sign up<%end%>
+        </li>
+        <li>
+         <%= link_to new_user_session_path,class: "text-light" do %>
+         <i class="fas fa-sign-in-alt"></i> login<%end%>
+        </li>
+      </ul>
+    </div>
+
+    <div id="hm-icon">
+      <a class="menu-trigger" >
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
+
 </div>
 </header>
 

@@ -14,7 +14,21 @@
 //= require popper
 //= require bootstrap-sprockets
 
+//= require jquery
+
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+document.addEventListener("turbolinks:load", function() {
+
+
+$(function() {
+  $('.menu-trigger').on('click', function(event) {
+    $(this).toggleClass('active');
+    $('#sp-menu').fadeToggle();
+    event.preventDefault();
+  });
+});
+
+})
