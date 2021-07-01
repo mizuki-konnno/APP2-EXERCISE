@@ -21,7 +21,7 @@
 
   </ul>
   <nav class="my-2 my-md-0 me-md-3 ">
-   <%= link_to user_path(current_user.id), class: "text-light" do %>
+   <%= link_to user_path(current_user.id), class: "text-light", data: { 'turbolinks': false } do %>
     <i class="fas fa-home"></i>Home<% end %>
     <%= link_to users_path, class: "text-light" do %>
     <i class="fas fa-users"></i>Users<% end %>
